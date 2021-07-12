@@ -1,0 +1,11 @@
+set base_path         /mnt/mirrordata/ubuntu
+set nthreads          32
+set _tilde            0
+set unlink            1
+
+deb http://archive.ubuntu.com/ubuntu focal main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu focal-security main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu focal-updates main restricted universe multiverse
+
+clean http://archive.ubuntu.com/ubuntu
+

@@ -1,0 +1,18 @@
+How to set up a mirror server
+=============================
+
+1. Create a new VM with an arbitrary configuration. Before creating the instance change the User Data script to the following snippet:
+```
+#!/bin/bash
+sudo bash -c "echo '<desired-hostname>' >/etc/hostname"
+sudo bash -c "hostname <desired-hostname>"
+```
+
+2. After the server has been started go to the Volumes tab and attach an adittional storage to the newly created machine (allocate at least 1TiB of storage). Also please ensure that the mount point is `/dev/vdb`.
+
+3. Connect to the machine using SSH and copy this archive into it (using `scp`)
+
+4. Run `setup/bootstrap.sh` under the root user
+
+5. (Optionally) Run the `apt-mirror` command to spin up the packages immediately and to not wait until the next night
+

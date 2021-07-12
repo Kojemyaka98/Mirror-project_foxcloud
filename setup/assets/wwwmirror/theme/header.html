@@ -1,0 +1,14 @@
+<div class="wrapper">
+<!-- we open the `wrapper` element here, but close it in the `footer.html` file -->
+<img src="%HOSTNAME_PLACEHOLDER%/theme/logo.png" style="display: block; margin: 0 auto; width: 256px; margin-bottom: 32px" />
+
+<ol class="breadcrumb" id="breadcrumb">
+</ol>
+
+<!-- This workaround is used as I found no other way to change page title -->
+<script>
+document.title = "FoxCloud Mirror | " + document.title.substring(9);
+</script>
+
+<input type="search" id="filter" placeholder="filter contents" />
+
